@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssey - Your Personalized Travel Partner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600') center/cover;
+            color: white;
+            padding: 2rem 1rem;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: #4CAF50;
+        }
+
+        .button {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #333;
+        }
+
+        .features {
+            padding: 4rem 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .phone-mockup {
+            width: 100%;
+            max-width: 300px;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .header {
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .hero-content {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="logo">
+            <img src="/api/placeholder/32/32" alt="Odyssey Logo" width="32" height="32">
+            Odyssey
+        </a>
+        <a href="#" class="button">Download now!</a>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your <span class="highlight">Personalized</span> Travel Partner</h1>
+                <p>Plan your own trip or just leave everything to us! Make your trip planning hassle-free with Odyssey's Automatic Trip Planner.</p>
+                <a href="#" class="button">Get Started with Trip Planning</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h2>Manual Planning</h2>
+                    <p>Take control of your journey with our detailed manual planning tools. Customize every aspect of your trip according to your preferences.</p>
+                    <img src="/api/placeholder/300/600" alt="App Screenshot" class="phone-mockup">
+                </div>
+                <div class="feature-card">
+                    <h2>Automatic Planner</h2>
+                    <p>Let our AI create the perfect itinerary based on your interests and budget. Get personalized suggestions for activities, accommodations, and more.</p>
+                    <img src="/api/placeholder/300/600" alt="App Screenshot" class="phone-mockup">
+                </div>
+                <div class="feature-card">
+                    <h2>Personalized Experience</h2>
+                    <p>Get customized recommendations that match your travel style. From luxury resorts to adventurous backpacking, we've got you covered.</p>
+                    <img src="/api/placeholder/300/600" alt="App Screenshot" class="phone-mockup">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
