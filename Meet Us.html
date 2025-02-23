@@ -20,8 +20,8 @@
         .header {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('api/placeholder/32/SriLanka.png') center/cover;
             color: white;
-            padding: 4rem 1rem;
-            min-height: 40vh;
+            padding: 3rem 1rem; /* Increased padding for better spacing */
+            min-height: 50vh; /* Increased height to make the image bigger */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -87,7 +87,22 @@
         }
 
         .button {
-            padding: 0.8rem 1.5rem;
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .team-member h3 {
@@ -217,6 +232,7 @@
             <div>
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="Odyssey_web.html">Home</a></li>
                     <li><a href="Meet Us.html">Meet Us</a></li>
                     <li><a href="Contact Us.html">Contact</a></li>
                 </ul>
