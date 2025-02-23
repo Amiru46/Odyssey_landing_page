@@ -18,7 +18,7 @@
         }
 
         .header {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/32/SriLanka.png') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('api/placeholder/32/SriLanka.png') center/cover;
             color: white;
             padding: 4rem 1rem;
             min-height: 90vh;
@@ -177,7 +177,14 @@
             }
 
             .logo img {
-                width: 80px;
+                width: 120px; /* Default size */
+                height: auto;
+            }
+
+            @media (max-width: 768px) {
+                .logo img {
+                    width: 100px; /* Smaller size for mobile */
+                }
             }
 
             .button {
@@ -210,18 +217,18 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <h2>Manual Planning</h2>
-                    <p>Take control of your journey with our detailed manual planning tools. Customize every aspect of your trip according to your preferences.</p>
-                    <img src="/api/placeholder/32/preview (4).png" alt="App Screenshot" class="phone-mockup">
+                    <p>Plan your own trip or just leave everything to us!</p>
+                    <img src="api/placeholder/32/preview (3).png" alt="App Screenshot" class="phone-mockup">
                 </div>
                 <div class="feature-card">
                     <h2>Automatic Planner</h2>
-                    <p>Let our AI create the perfect itinerary based on your interests and budget. Get personalized suggestions for activities, accommodations, and more.</p>
-                    <img src="/api/placeholder/32/preview (5).png" alt="App Screenshot" class="phone-mockup">
+                    <p>Make your trip planning Hassle-free With Odyssey’s Automatic Trip Planner.</p>
+                    <img src="api/placeholder/32/preview (5).png" alt="App Screenshot" class="phone-mockup">
                 </div>
                 <div class="feature-card">
                     <h2>Personalized Experience</h2>
-                    <p>Get customized recommendations that match your travel style. From luxury resorts to adventurous backpacking, we've got you covered.</p>
-                    <img src="/api/placeholder/32/preview (3).png" alt="App Screenshot" class="phone-mockup">
+                    <p>Get Personalized Suggestions According to Your Preferences!</p>
+                    <img src="api/placeholder/32/preview (4).png" alt="App Screenshot" class="phone-mockup">
                 </div>
             </div>
         </div>
@@ -248,8 +255,8 @@
             <div style="flex: 1; min-width: 200px; margin-bottom: 1rem;">
                 <h4 style="color: #4CAF50; margin-bottom: 1rem;">Quick Links</h4>
                 <ul style="list-style: none; padding: 0;">
-                    <li><a href="#" style="color: white; text-decoration: none;">Meet Us</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+                    <li><a href="Meet Us.html" style="color: white; text-decoration: none;">Meet Us</a></li>
+                    <li><a href="Contact Us.html" style="color: white; text-decoration: none;">Contact</a></li>
                 </ul>
             </div>
             <div style="flex: 1; min-width: 200px; margin-bottom: 1rem;">
@@ -262,8 +269,7 @@
             <div style="flex: 1; min-width: 200px; margin-bottom: 1rem;">
                 <h4 style="color: #4CAF50; margin-bottom: 1rem;">Follow Us</h4>
                 <ul style="list-style: none; padding: 0;">
-                    <li><a href="#" style="color: white; text-decoration: none;">Facebook</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Twitter</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Youtube</a></li>
                     <li><a href="#" style="color: white; text-decoration: none;">Instagram</a></li>
                 </ul>
             </div>
