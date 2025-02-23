@@ -14,20 +14,22 @@
 
         body {
             line-height: 1.5;
+            background-color: #f8f9fa;
         }
 
         .header {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/32/SriLanka.png') center/cover;
             color: white;
-            padding: 2rem 1rem;
-            min-height: 80vh;
+            padding: 4rem 1rem;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            position: relative;
         }
 
         .nav {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -35,6 +37,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        .nav.scrolled {
+            background: rgba(0, 0, 0, 0.9);
         }
 
         .logo {
@@ -43,8 +53,12 @@
             gap: 0.5rem;
             color: white;
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
         }
 
         .container {
@@ -55,34 +69,47 @@
 
         .hero-content {
             max-width: 600px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
         .highlight {
             color: #4CAF50;
+            font-weight: bold;
         }
 
         .button {
             display: inline-block;
-            background: #000;
+            background: #4CAF50;
             color: white;
             padding: 1rem 2rem;
             border-radius: 2rem;
             text-decoration: none;
-            margin-top: 1rem;
-            transition: background 0.3s;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .button:hover {
-            background: #333;
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .features {
-            padding: 4rem 1rem;
+            padding: 6rem 1rem;
+            background: white;
         }
 
         .feature-grid {
@@ -94,9 +121,27 @@
 
         .feature-card {
             background: white;
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
         }
 
         .phone-mockup {
@@ -104,20 +149,39 @@
             max-width: 300px;
             margin: 2rem auto;
             display: block;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .phone-mockup:hover {
+            transform: scale(1.02);
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .header {
                 text-align: center;
-                padding: 1rem;
+                padding: 2rem 1rem;
             }
             
             .hero-content {
                 margin: 0 auto;
+            }
+
+            .nav {
+                padding: 0.5rem;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+
+            .button {
+                padding: 0.8rem 1.5rem;
             }
         }
     </style>
@@ -125,8 +189,7 @@
 <body>
     <nav class="nav">
         <a href="#" class="logo">
-            <img src="/api/placeholder/32/32" alt="Odyssey Logo" width="32" height="32">
-            Odyssey
+            <img src="api/placeholder/32/image-removebg-preview (1) 1.png" alt="Odyssey Logo">
         </a>
         <a href="#" class="button">Download now!</a>
     </nav>
@@ -134,9 +197,10 @@
     <header class="header">
         <div class="container">
             <div class="hero-content">
+                <h1>Odyssey</h1>
                 <h1>Your <span class="highlight">Personalized</span> Travel Partner</h1>
                 <p>Plan your own trip or just leave everything to us! Make your trip planning hassle-free with Odyssey's Automatic Trip Planner.</p>
-                <a href="#" class="button">Get Started with Trip Planning</a>
+                <a href="#" class="button">Get Started with Trip Planning Download now!</a>
             </div>
         </div>
     </header>
@@ -147,20 +211,32 @@
                 <div class="feature-card">
                     <h2>Manual Planning</h2>
                     <p>Take control of your journey with our detailed manual planning tools. Customize every aspect of your trip according to your preferences.</p>
-                    <img src="/api/placeholder/300/600" alt="App Screenshot" class="phone-mockup">
+                    <img src="/api/placeholder/32/preview (4).png" alt="App Screenshot" class="phone-mockup">
                 </div>
                 <div class="feature-card">
                     <h2>Automatic Planner</h2>
                     <p>Let our AI create the perfect itinerary based on your interests and budget. Get personalized suggestions for activities, accommodations, and more.</p>
-                    <img src="/api/placeholder/300/600" alt="App Screenshot" class="phone-mockup">
+                    <img src="/api/placeholder/32/preview (5).png" alt="App Screenshot" class="phone-mockup">
                 </div>
                 <div class="feature-card">
                     <h2>Personalized Experience</h2>
                     <p>Get customized recommendations that match your travel style. From luxury resorts to adventurous backpacking, we've got you covered.</p>
-                    <img src="/api/placeholder/300/600" alt="App Screenshot" class="phone-mockup">
+                    <img src="/api/placeholder/32/preview (3).png" alt="App Screenshot" class="phone-mockup">
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Add scrolled class to nav when page is scrolled
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
