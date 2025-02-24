@@ -222,6 +222,54 @@
             }
         }
 
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50vh; /* Adjust height as needed */
+        }
+
+        .text h2 {
+            font-size: 3rem; /* Increase size */
+            font-weight: bold;
+        }
+
+        .text p {
+            font-size: 1.5rem; /* Increase size */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        /* Image Styling */
+        .pop-image {
+            width: 300px;
+            height: auto;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: popIn 1s ease-out forwards;
+        }
+
+        /* Pop-in Animation */
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.15);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         .features-section {
             max-width: 1200px;
             margin: 50px auto;
@@ -291,7 +339,7 @@
             <div class="hero-content">
                 <h1>Odyssey</h1>
                 <h1>Your <span class="highlight">Personalized</span> Travel Partner</h1>
-                <p>Plan your own trip or just leave everything to us! Make your trip planning hassle-free with Odyssey's Automatic Trip Planner.</p>
+                <p>Whether you're traveling solo or with friends, Odyssey makes planning seamless and stress-free with Odyssey's Automatic Trip Planner.</p>
                 <a href="#" class="button">Get Started with Trip Planning Download now!</a>
             </div>
         </div>
@@ -299,18 +347,21 @@
 
     <div class="container">
         <div class="section">
-            <img src="api/placeholder/32/preview (4).png" alt="Plan a Trip Screen" class="phone">
+            
             <div class="text">
-                <h2>Plan your own trip or, just leave everything to us!</h2>
+                <h2>Plan your own trip or just leave everything to us!</h2>
                 <p>Make your trip planning Hassle-free With <span class="highlight">Odyssey’s</span> Automatic Trip Planner.</p>
             </div>
+        </div>
+
+        <div class="image-container">
+            <img src="api/placeholder/32/kPh6Q1i87tC6Non4C5FjPk5v2EwEqCeayoeNjYqU.png" alt="Trip Planning" class="pop-image">
         </div>
 
         <div class="section">
             <div class="text">
                 <h2>Get <span class="highlight">Personalized</span> Suggestions According to Your Preferences!</h2>
             </div>
-            <img src="api/placeholder/32/preview (6).png" alt="Trip Suggestions Screen" class="phone">
         </div>
     </div>
 
